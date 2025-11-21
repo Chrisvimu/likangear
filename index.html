@@ -48,7 +48,7 @@
         }
 
         .navbar {
-            padding: 0.5rem 0; /* Reduced padding slightly to accommodate logo */
+            padding: 0.5rem 0;
         }
 
         .navbar .container {
@@ -57,17 +57,17 @@
             align-items: center;
         }
 
-        /* LOGO STYLES UPDATED */
+        /* LOGO STYLES */
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px; /* Space between image and text */
+            gap: 15px;
             text-decoration: none;
             color: white;
         }
 
         .logo-img {
-            height: 50px; /* Adjust size as needed */
+            height: 50px;
             width: auto;
         }
 
@@ -190,7 +190,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* PRODUCT IMAGE STYLES UPDATED */
         .product-img {
             height: 200px;
             width: 100%;
@@ -240,7 +239,7 @@
             padding: 0.75rem 2rem;
             text-decoration: none;
             border-radius: 25px;
-            margin-top: auto; /* Pushes button to bottom */
+            margin-top: auto;
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
@@ -493,7 +492,6 @@
         <nav class="navbar">
             <div class="container">
                 <a href="#" class="logo">
-                    <!-- LOGO IMAGE ADDED HERE -->
                     <img src="logo.png" alt="Logo LikanGear" class="logo-img">
                     <div class="logo-text">
                         <h1>LikanGear</h1>
@@ -505,7 +503,6 @@
                     <li><a href="#products">Productos</a></li>
                     <li><a href="#about">Nosotros</a></li>
                     <li><a href="#order">Ordenar</a></li>
-                    <!-- Link to switch to English -->
                     <li><a href="index_en.html" style="font-size: 0.9rem; opacity: 0.8;">🇺🇸 EN</a></li>
                 </ul>
             </div>
@@ -528,9 +525,7 @@
             <div class="container">
                 <h2 class="section-title">Nuestros Productos</h2>
                 <div class="products-grid">
-                    <!-- PRODUCT 1: Magnesera -->
                     <div class="product-card">
-                        <!-- IMAGE REPLACEMENT -->
                         <img src="magnesium_holder.png" alt="Magnesera Ecológica" class="product-img">
                         <h3>Magneseras</h3>
                         <p>Magneseras duraderas y ecológicas hechas de materiales reciclados. Diseñadas para la comodidad y la sostenibilidad.</p>
@@ -543,9 +538,7 @@
                         <a href="#order" class="product-button">Ordenar Ahora</a>
                     </div>
                     
-                    <!-- PRODUCT 2: Magnesio -->
                     <div class="product-card">
-                        <!-- IMAGE REPLACEMENT -->
                         <img src="magnesium.png" alt="Magnesio de Escalada" class="product-img">
                         <h3>Magnesio (Chalk)</h3>
                         <p>Carbonato de magnesio de calidad premium, suave con tu piel y con el medio ambiente.</p>
@@ -593,18 +586,20 @@
                 <h2 class="section-title">Haz tu Pedido</h2>
                 <div class="order-content">
                     <p>¿Listo para escalar con equipo sostenible? Ponte en contacto con nosotros para realizar tu pedido.</p>
-                    <form class="order-form">
+                    <!-- FORMULARIO ACTUALIZADO -->
+                    <form class="order-form" action="mailto:crvmtech@gmail.com" method="post" enctype="text/plain">
+                        
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="Nombre" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="Email" required>
                         </div>
                         <div class="form-group">
                             <label for="product">Producto</label>
-                            <select id="product" name="product" required>
+                            <select id="product" name="Producto" required>
                                 <option value="">Selecciona un producto</option>
                                 <option value="holder">Magnesera</option>
                                 <option value="chalk">Magnesio de Escalada (Chalk)</option>
@@ -613,13 +608,13 @@
                         </div>
                         <div class="form-group">
                             <label for="quantity">Cantidad</label>
-                            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                            <input type="number" id="quantity" name="Cantidad" min="1" value="1" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Notas Adicionales</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                            <textarea id="message" name="Mensaje" rows="4"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Enviar Pedido</button>
+                        <button type="submit" class="submit-button">Crear correo de pedido</button>
                     </form>
                 </div>
             </div>
