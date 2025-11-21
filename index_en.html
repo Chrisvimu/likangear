@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LikanGear - Eco-friendly rock climbing gear. Order sustainable magnesium holders and chalk for your climbing adventures.">
+    <title>LikanGear - Eco-Friendly Rock Climbing Gear</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #2d5016;
+            --secondary-green: #4a7c2e;
+            --light-green: #7fb069;
+            --accent-green: #b8d4a3;
+            --earth-brown: #8b6f47;
+            --light-gray: #f4f4f4;
+            --dark-gray: #333;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        header {
+            background-color: var(--primary-green);
+            color: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            padding: 0.5rem 0; /* Reduced padding slightly to accommodate logo */
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO STYLES UPDATED */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Space between image and text */
+            text-decoration: none;
+            color: white;
+        }
+
+        .logo-img {
+            height: 50px; /* Adjust size as needed */
+            width: auto;
+        }
+
+        .logo-text h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0;
+            line-height: 1;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-green) 0%, var(--primary-green) 100%);
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-green);
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--light-green);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-green);
+            color: var(--primary-green);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 3rem;
+            font-weight: bold;
+        }
+
+        /* Products Section */
+        .products {
+            background-color: var(--light-gray);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* PRODUCT IMAGE STYLES UPDATED */
+        .product-img {
+            height: 200px;
+            width: 100%;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card h3 {
+            color: var(--primary-green);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-card > p {
+            color: var(--dark-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            list-style: none;
+            text-align: left;
+            margin: 1.5rem 0;
+            padding-left: 1rem;
+            width: 100%;
+        }
+
+        .product-features li {
+            padding: 0.5rem 0;
+            color: var(--dark-gray);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .product-features li::before {
+            content: "✓";
+            color: var(--secondary-green);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .product-button {
+            display: inline-block;
+            background-color: var(--secondary-green);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-top: auto; /* Pushes button to bottom */
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-button:hover {
+            background-color: var(--light-green);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--white);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .about-text h3 {
+            color: var(--primary-green);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: var(--dark-gray);
+        }
+
+        .about-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature {
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--secondary-green);
+        }
+
+        .feature h4 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .feature p {
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        /* Order Section */
+        .order {
+            background: linear-gradient(135deg, var(--accent-green) 0%, var(--light-green) 100%);
+            padding: 4rem 0;
+        }
+
+        .order-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .order-content > p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            color: var(--dark-gray);
+        }
+
+        .order-form {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--primary-green);
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--accent-green);
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary-green);
+        }
+
+        .submit-button {
+            width: 100%;
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.125rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background-color: var(--secondary-green);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-green);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-brand p {
+            opacity: 0.9;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-green);
+        }
+
+        .footer-contact p {
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.25rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-links ul {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-button {
+                padding: 0.875rem 2rem;
+                font-size: 1rem;
+            }
+
+            .order-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <!-- LOGO IMAGE ADDED HERE -->
+                    <img src="logo.png" alt="LikanGear Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>LikanGear</h1>
+                        <p class="tagline">Eco-Friendly Climbing</p>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <!-- Link to switch to Spanish -->
+                    <li><a href="index.html" style="font-size: 0.9rem; opacity: 0.8;">🇨🇱 ES</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Climb Sustainably</h2>
+                    <p class="hero-subtitle">Premium eco-friendly rock climbing gear for conscious climbers</p>
+                    <p>At LikanGear, we believe in protecting the environments we love to climb. Our products are designed with sustainability and the circular economy at their core.</p>
+                    <a href="#products" class="cta-button">Explore Products</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="products">
+            <div class="container">
+                <h2 class="section-title">Our Products</h2>
+                <div class="products-grid">
+                    <!-- PRODUCT 1: Magnesium Holder -->
+                    <div class="product-card">
+                        <!-- IMAGE REPLACEMENT -->
+                        <img src="magnesium_holder.png" alt="Magnesium Holder" class="product-img">
+                        <h3>Magnesium Holders</h3>
+                        <p>Durable, eco-friendly chalk bags made from recycled materials. Designed for comfort and sustainability.</p>
+                        <ul class="product-features">
+                            <li>100% recycled fabric</li>
+                            <li>Adjustable waist belt</li>
+                            <li>Secure closure system</li>
+                            <li>Available in multiple colors</li>
+                        </ul>
+                        <a href="#order" class="product-button">Order Now</a>
+                    </div>
+
+                    <!-- PRODUCT 2: Magnesium (Chalk) -->
+                    <div class="product-card">
+                        <!-- IMAGE REPLACEMENT -->
+                        <img src="magnesium.png" alt="Climbing Chalk" class="product-img">
+                        <h3>Climbing Magnesium (Chalk)</h3>
+                        <p>Premium quality magnesium carbonate chalk that's gentle on your skin and the environment.</p>
+                        <ul class="product-features">
+                            <li>Pure magnesium carbonate</li>
+                            <li>Eco-friendly packaging</li>
+                            <li>Superior grip enhancement</li>
+                            <li>Available in blocks and loose forms</li>
+                        </ul>
+                        <a href="#order" class="product-button">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">Our Mission</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Circular Economy in Action</h3>
+                        <p>LikanGear is committed to the principles of circular economy. We design our products to last, and when they reach the end of their life, we take them back for recycling and repurposing.</p>
+                        <p>Every product we create minimizes environmental impact while maximizing performance. We source sustainable materials, reduce waste in production, and partner with environmental organizations to give back to climbing communities worldwide.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature">
+                            <h4>♻️ Sustainable Materials</h4>
+                            <p>Recycled and eco-friendly materials in all our products</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🌍 Carbon Neutral</h4>
+                            <p>We offset our carbon footprint through verified programs</p>
+                        </div>
+                        <div class="feature">
+                            <h4>🔄 Take-Back Program</h4>
+                            <p>Return old gear for recycling and get discounts on new products</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="order" class="order">
+            <div class="container">
+                <h2 class="section-title">Place Your Order</h2>
+                <div class="order-content">
+                    <p>Ready to climb with sustainable gear? Get in touch with us to place your order.</p>
+                    <form class="order-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Product</label>
+                            <select id="product" name="product" required>
+                                <option value="">Select a product</option>
+                                <option value="holder">Magnesium Holder</option>
+                                <option value="chalk">Climbing Magnesium (Chalk)</option>
+                                <option value="both">Both Products</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Quantity</label>
+                            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Notes</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Submit Order Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>LikanGear</h3>
+                    <p>Sustainable climbing gear for a better tomorrow</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#order">Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Email: info@likangear.com</p>
+                    <p>Building a sustainable future, one climb at a time</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 LikanGear. All rights reserved. | Committed to circular economy and sustainability</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
