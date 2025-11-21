@@ -48,7 +48,7 @@
         }
 
         .navbar {
-            padding: 0.5rem 0; /* Reduced padding slightly to accommodate logo */
+            padding: 0.5rem 0;
         }
 
         .navbar .container {
@@ -57,17 +57,17 @@
             align-items: center;
         }
 
-        /* LOGO STYLES UPDATED */
+        /* LOGO STYLES */
         .logo {
             display: flex;
             align-items: center;
-            gap: 15px; /* Space between image and text */
+            gap: 15px;
             text-decoration: none;
             color: white;
         }
 
         .logo-img {
-            height: 50px; /* Adjust size as needed */
+            height: 50px;
             width: auto;
         }
 
@@ -190,7 +190,6 @@
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
-        /* PRODUCT IMAGE STYLES UPDATED */
         .product-img {
             height: 200px;
             width: 100%;
@@ -240,7 +239,7 @@
             padding: 0.75rem 2rem;
             text-decoration: none;
             border-radius: 25px;
-            margin-top: auto; /* Pushes button to bottom */
+            margin-top: auto;
             font-weight: bold;
             transition: background-color 0.3s ease;
         }
@@ -493,7 +492,6 @@
         <nav class="navbar">
             <div class="container">
                 <a href="#" class="logo">
-                    <!-- LOGO IMAGE ADDED HERE -->
                     <img src="logo.png" alt="LikanGear Logo" class="logo-img">
                     <div class="logo-text">
                         <h1>LikanGear</h1>
@@ -505,7 +503,6 @@
                     <li><a href="#products">Products</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#order">Order</a></li>
-                    <!-- Link to switch to Spanish -->
                     <li><a href="index.html" style="font-size: 0.9rem; opacity: 0.8;">🇨🇱 ES</a></li>
                 </ul>
             </div>
@@ -528,9 +525,7 @@
             <div class="container">
                 <h2 class="section-title">Our Products</h2>
                 <div class="products-grid">
-                    <!-- PRODUCT 1: Magnesium Holder -->
                     <div class="product-card">
-                        <!-- IMAGE REPLACEMENT -->
                         <img src="magnesium_holder.png" alt="Magnesium Holder" class="product-img">
                         <h3>Magnesium Holders</h3>
                         <p>Durable, eco-friendly chalk bags made from recycled materials. Designed for comfort and sustainability.</p>
@@ -543,9 +538,7 @@
                         <a href="#order" class="product-button">Order Now</a>
                     </div>
 
-                    <!-- PRODUCT 2: Magnesium (Chalk) -->
                     <div class="product-card">
-                        <!-- IMAGE REPLACEMENT -->
                         <img src="magnesium.png" alt="Climbing Chalk" class="product-img">
                         <h3>Climbing Magnesium (Chalk)</h3>
                         <p>Premium quality magnesium carbonate chalk that's gentle on your skin and the environment.</p>
@@ -593,18 +586,20 @@
                 <h2 class="section-title">Place Your Order</h2>
                 <div class="order-content">
                     <p>Ready to climb with sustainable gear? Get in touch with us to place your order.</p>
-                    <form class="order-form">
+                    <!-- MAILTO LOGIC HERE -->
+                    <form class="order-form" action="mailto:crvmtech@gmail.com" method="post" enctype="text/plain">
+                        
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="Name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="Email" required>
                         </div>
                         <div class="form-group">
                             <label for="product">Product</label>
-                            <select id="product" name="product" required>
+                            <select id="product" name="Product" required>
                                 <option value="">Select a product</option>
                                 <option value="holder">Magnesium Holder</option>
                                 <option value="chalk">Climbing Magnesium (Chalk)</option>
@@ -613,13 +608,14 @@
                         </div>
                         <div class="form-group">
                             <label for="quantity">Quantity</label>
-                            <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                            <input type="number" id="quantity" name="Quantity" min="1" value="1" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Additional Notes</label>
-                            <textarea id="message" name="message" rows="4"></textarea>
+                            <textarea id="message" name="Message" rows="4"></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Submit Order Request</button>
+                        <!-- The submit button triggers the form action -->
+                        <button type="submit" class="submit-button">Draft Order Email</button>
                     </form>
                 </div>
             </div>
